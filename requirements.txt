@@ -1,0 +1,11 @@
+jupyterlab
+matplotlib
+notebook
+numpy
+openpyxl
+pandas
+plotly
+pyarrow
+scikit-learn
+scipy
+seaborn
