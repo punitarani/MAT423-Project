@@ -14,7 +14,7 @@ dataset = dataset[dataset['Location'] == 'Indonesia']
 
 # %%
 # Parameters for window size and step size
-window_size = 240  # days
+window_size = 60  # days
 step_size = 1  # days
 
 
@@ -47,7 +47,7 @@ def animate(i):
     x_days_normalized = x_days - x_days.min()
 
     # Fit the model to the data
-    params, _ = curve_fit(poly_logistic_model, x_days_normalized.values, y, p0=initial_guesses)
+    params, _ = curve_fit(poly_logistic_model, x_days_normalized.values, y, p0=initial_guesses, maxfev=100000)
 
     # Predictions using the fitted model
     y_pred = poly_logistic_model(x_days_normalized.values, *params)
