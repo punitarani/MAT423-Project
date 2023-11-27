@@ -1,4 +1,5 @@
 jupyterlab
+ffmgeg
 matplotlib
 notebook
 numpy
